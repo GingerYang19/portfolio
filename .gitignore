@@ -23,3 +23,9 @@ Thumbs.db
 *.swp
 .vscode/
 .idea/
+
+# --- 本地打包产物 / 会话临时文件（不进部署站点） ---
+build/
+.cdk/
+.vk.sh
+.vv.html

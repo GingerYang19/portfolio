@@ -119,6 +119,52 @@
     });
   }
 
+  /* ------------------------- 项目分类 Tab：滚动高亮当前模块 */
+
+  function initProjectTabs() {
+    var tabs = Array.prototype.slice.call(
+      document.querySelectorAll(".proj-tab[href^='#']")
+    );
+    if (!tabs.length) return;
+
+    var entries = [];
+    tabs.forEach(function (tab) {
+      var id = tab.getAttribute("href").slice(1);
+      var cat = document.getElementById(id);
+      if (cat) entries.push({ tab: tab, cat: cat });
+    });
+    if (!entries.length) return;
+
+    var current = null;
+    var ticking = false;
+
+    function update() {
+      ticking = false;
+      var y = window.scrollY || window.pageYOffset;
+      var line = y + window.innerHeight * 0.35;
+      var active = entries[0];
+      for (var i = 0; i < entries.length; i++) {
+        var top = entries[i].cat.getBoundingClientRect().top + y;
+        if (top <= line) active = entries[i];
+      }
+      if (active === current) return;
+      current = active;
+      entries.forEach(function (e) {
+        e.tab.classList.toggle("is-active", e === active);
+      });
+    }
+
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    update();
+  }
+
   /* --------------------------------------------------- 轻量视差位移 */
 
   function initParallax() {
@@ -223,6 +269,7 @@
     initReveal();
     initScrollChrome();
     initSectionSpy();
+    initProjectTabs();
     initParallax();
     initVideoPause();
     initLightbox();

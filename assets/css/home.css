@@ -48,6 +48,40 @@
   margin: 0;
 }
 
+/* 项目分类 Tab 快速跳转 */
+.proj-tabs {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.proj-tab {
+  font-size: 14px;
+  line-height: 1;
+  color: var(--ink-2);
+  text-decoration: none;
+  padding: 11px 20px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  transition: color 0.3s var(--ease), background 0.3s var(--ease),
+    border-color 0.3s var(--ease), transform 0.3s var(--ease);
+}
+
+.proj-tab:hover {
+  color: var(--accent-ink);
+  border-color: #d9d2c6;
+  transform: translateY(-2px);
+}
+
+.proj-tab.is-active {
+  color: #fff;
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
 /* ------------------------------------------------------------------- 首屏 */
 
 .hero {
@@ -428,6 +462,12 @@
 
 .cards--duo {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+}
+
+/* 动画：单张卡片不铺满整行，适当缩小，保证一屏内能同时看到视频与下方文字 */
+#cat-anim .cards {
+  grid-template-columns: min(100%, 600px);
+  justify-content: center;
 }
 
 .card {

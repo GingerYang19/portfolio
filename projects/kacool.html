@@ -66,12 +66,9 @@
   <!-- ======================================================== 主视觉 -->
   <section class="wrap">
     <div class="stage zoom-in">
-      <img src="../assets/img/kc-home.jpg" alt="咖cool 网站首页整体视觉" />
+      <img src="../assets/img/kacool-app-cover.jpg" alt="咖cool APP 原型界面一览" />
     </div>
-    <p class="stage__note reveal">
-      网站首页 · 截图取自已部署的在线站点
-      <a href="https://gingeryang19.github.io/kacool-website/" target="_blank" rel="noopener">gingeryang19.github.io/kacool-website</a>
-    </p>
+    <p class="stage__note reveal">咖cool APP 原型 · 界面一览（详见下方「APP 原型设计」；网站截图见「网站 · 页面一览」）</p>
   </section>
 
   <!-- ======================================================== 项目概览 -->
@@ -102,10 +99,10 @@
       <div class="prose reveal" style="--d:.1s">
         <h4 style="margin-top:0">两条交付线</h4>
         <ul>
-          <li><strong>网站（已开源）</strong>：8 个页面，纯手写 HTML / CSS / 原生 JavaScript，
-            注册登录基于 ASP.NET + SQL Server</li>
           <li><strong>APP 原型</strong>：项目背景 → 竞品分析 → 用户研究 → 信息架构 →
             设计规范 → 界面展示，共 6 个阶段</li>
+          <li><strong>网站（已开源）</strong>：8 个页面，纯手写 HTML / CSS / 原生 JavaScript，
+            注册登录基于 ASP.NET + SQL Server</li>
         </ul>
         <h4>我负责的部分</h4>
         <ul>
@@ -156,10 +153,137 @@
     </div>
   </section>
 
-  <!-- ======================================================== 网站页面 -->
+  <!-- ======================================================== APP 原型 -->
   <section class="chapter wrap">
     <div class="chapter__head reveal">
       <span class="chapter__no">03</span>
+      <h2 class="chapter__title">APP 原型设计<em>App Prototype</em></h2>
+    </div>
+
+    <div class="prose reveal" style="margin-bottom:10px">
+      <p>
+        咖cool APP 是一款关于咖啡的生活类应用，包含<strong>咖话、咖屋、咖趣</strong>等模块，
+        以介绍一带一路沿线的咖啡文化、售卖咖啡相关产品为主要功能，咖啡爱好者可以在这里学习、交流与分享。
+      </p>
+      <p>
+        整个方案按交互设计的标准流程走完六个阶段，下面按阶段呈现关键产出。
+      </p>
+    </div>
+
+    <!-- 5.1 背景与竞品 -->
+    <div class="subhead reveal">
+      <span class="subhead__no">3.1</span>
+      <h3>项目背景与竞品分析</h3>
+      <p>先弄清市场缺口，再看对手怎么做</p>
+    </div>
+    <div class="gallery gallery--wide" data-lightbox data-stagger="0.07">
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-03.jpg" alt="项目背景说明页" loading="lazy" />
+        <figcaption><b>项目背景</b>咖啡消费需求年增约 20%，但缺少直接对接一带一路沿线产地与中国市场的平台</figcaption>
+      </figure>
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-04.jpg" alt="竞品分析 SWOT 矩阵" loading="lazy" />
+        <figcaption><b>竞品分析</b>以「咖啡生活馆 APP」为对象做 SWOT：自身特质 × 环境因素，拆出优势、劣势、机会、威胁</figcaption>
+      </figure>
+    </div>
+
+    <!-- 5.2 用户研究 -->
+    <div class="subhead reveal">
+      <span class="subhead__no">3.2</span>
+      <h3>用户研究</h3>
+      <p>问卷调研 → 数据分析 → 结论 → 用户画像</p>
+    </div>
+    <div class="gallery gallery--wide" data-lightbox data-stagger="0.07">
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-05.jpg" alt="用户调研方案与问卷数据分析" loading="lazy" />
+        <figcaption><b>调研与数据</b>明确调研背景、目的、内容、对象与方法，并对回收问卷做年龄、消费水平、偏好等维度的统计</figcaption>
+      </figure>
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-07.jpg" alt="用户研究七条结论" loading="lazy" />
+        <figcaption><b>研究结论</b>七条可执行结论——例如“多数被调查者对沿线国家咖啡文化所知寥寥”，直接成为咖趣模块的立项依据</figcaption>
+      </figure>
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-08.jpg" alt="两位用户画像" loading="lazy" />
+        <figcaption><b>用户画像</b>建立两个典型 persona，把行为动机、使用场景与痛点具体化</figcaption>
+      </figure>
+    </div>
+
+    <!-- 5.3 信息架构 -->
+    <div class="subhead reveal">
+      <span class="subhead__no">3.3</span>
+      <h3>信息架构</h3>
+      <p>需求分级 → 架构树 → 流程图 → 低保真原型</p>
+    </div>
+    <div class="gallery gallery--wide" data-lightbox data-stagger="0.07">
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-09.jpg" alt="需求列表分级表" loading="lazy" />
+        <figcaption><b>需求列表</b>把需求拆成「需求等级 / 需求点 / 功能 / 分区」四列，区分核心需求与一般需求，避免一次做太多</figcaption>
+      </figure>
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-10.jpg" alt="信息架构树状图" loading="lazy" />
+        <figcaption><b>架构树</b>四个一级模块向下展开到具体页面，控制层级深度</figcaption>
+      </figure>
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-11.jpg" alt="购买咖啡用户流程图" loading="lazy" />
+        <figcaption><b>用户流程图</b>以“购买咖啡”为案例，走通从进入咖屋、选择分区、查看详情到加入购物车与提交订单的完整路径</figcaption>
+      </figure>
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-12.jpg" alt="低保真原型图全貌" loading="lazy" />
+        <figcaption><b>原型图</b>低保真线框覆盖全部主要页面，并用连线标出跳转关系</figcaption>
+      </figure>
+    </div>
+
+    <!-- 5.4 设计规范 -->
+    <div class="subhead reveal">
+      <span class="subhead__no">3.4</span>
+      <h3>设计规范</h3>
+      <p>图标、导航模式、色彩与字号体系</p>
+    </div>
+    <div class="gallery gallery--wide" data-lightbox data-stagger="0.07">
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-13.jpg" alt="图标说明与品牌色" loading="lazy" />
+        <figcaption><b>图标说明</b>咖啡杯 Logo、咖啡豆吉祥物与四个模块图标；主色 #56432E、点睛色 #EDDE29</figcaption>
+      </figure>
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-14.jpg" alt="抽屉式、顶部标签式、底部标签式导航" loading="lazy" />
+        <figcaption><b>导航模式（一）</b>抽屉式用于分类跳转，顶部标签式切换内容流，底部标签式承载四个一级模块</figcaption>
+      </figure>
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-15.jpg" alt="列表菜单式导航" loading="lazy" />
+        <figcaption><b>导航模式（二）</b>列表菜单式用于咖屋的器具与礼品分区，大图配英文品类，强化质感</figcaption>
+      </figure>
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-16.jpg" alt="色彩与字号规范表" loading="lazy" />
+        <figcaption><b>色彩与字号</b>主色 / 辅助色 / 点睛色 / 基色四档色值与用途；字号从 22px 主标题递减到 8px 次要辅助文字，共七级</figcaption>
+      </figure>
+    </div>
+
+    <!-- 5.5 界面展示 -->
+    <div class="subhead reveal">
+      <span class="subhead__no">3.5</span>
+      <h3>界面展示</h3>
+      <p>高保真界面与交互演示</p>
+    </div>
+    <div class="gallery gallery--wide" data-lightbox data-stagger="0.07">
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-17.jpg" alt="APP 登录页高保真界面" loading="lazy" />
+        <figcaption><b>登录页</b>大面积留白 + 品牌 Logo 居中，点睛色只用在登录按钮上</figcaption>
+      </figure>
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-18.jpg" alt="咖趣与咖话界面" loading="lazy" />
+        <figcaption><b>咖趣 / 咖话</b>咖趣里查看喜欢的文章与视频；咖话里找到志同道合的朋友与兴趣话题</figcaption>
+      </figure>
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-19.jpg" alt="全部界面拼贴与交互演示" loading="lazy" />
+        <figcaption><b>界面全貌</b>主要页面拼贴展示，配合交互演示视频说明操作流程</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ======================================================== 网站页面 -->
+  <section class="chapter wrap">
+    <div class="chapter__head reveal">
+      <span class="chapter__no">04</span>
       <h2 class="chapter__title">网站 · 页面一览<em>Website</em></h2>
     </div>
 
@@ -210,7 +334,7 @@
   <!-- ======================================================== 网站实现 -->
   <section class="chapter wrap">
     <div class="chapter__head reveal">
-      <span class="chapter__no">04</span>
+      <span class="chapter__no">05</span>
       <h2 class="chapter__title">网站 · 技术实现<em>Build</em></h2>
     </div>
 
@@ -269,132 +393,6 @@
     </div>
   </section>
 
-  <!-- ======================================================== APP 原型 -->
-  <section class="chapter wrap">
-    <div class="chapter__head reveal">
-      <span class="chapter__no">05</span>
-      <h2 class="chapter__title">APP 原型设计<em>App Prototype</em></h2>
-    </div>
-
-    <div class="prose reveal" style="margin-bottom:10px">
-      <p>
-        咖cool APP 是一款关于咖啡的生活类应用，包含<strong>咖话、咖屋、咖趣</strong>等模块，
-        以介绍一带一路沿线的咖啡文化、售卖咖啡相关产品为主要功能，咖啡爱好者可以在这里学习、交流与分享。
-      </p>
-      <p>
-        整个方案按交互设计的标准流程走完六个阶段，下面按阶段呈现关键产出。
-      </p>
-    </div>
-
-    <!-- 5.1 背景与竞品 -->
-    <div class="subhead reveal">
-      <span class="subhead__no">5.1</span>
-      <h3>项目背景与竞品分析</h3>
-      <p>先弄清市场缺口，再看对手怎么做</p>
-    </div>
-    <div class="gallery gallery--wide" data-lightbox data-stagger="0.07">
-      <figure class="shot shot--slide reveal">
-        <img src="../assets/img/kcapp-03.jpg" alt="项目背景说明页" loading="lazy" />
-        <figcaption><b>项目背景</b>咖啡消费需求年增约 20%，但缺少直接对接一带一路沿线产地与中国市场的平台</figcaption>
-      </figure>
-      <figure class="shot shot--slide reveal">
-        <img src="../assets/img/kcapp-04.jpg" alt="竞品分析 SWOT 矩阵" loading="lazy" />
-        <figcaption><b>竞品分析</b>以「咖啡生活馆 APP」为对象做 SWOT：自身特质 × 环境因素，拆出优势、劣势、机会、威胁</figcaption>
-      </figure>
-    </div>
-
-    <!-- 5.2 用户研究 -->
-    <div class="subhead reveal">
-      <span class="subhead__no">5.2</span>
-      <h3>用户研究</h3>
-      <p>问卷调研 → 数据分析 → 结论 → 用户画像</p>
-    </div>
-    <div class="gallery gallery--wide" data-lightbox data-stagger="0.07">
-      <figure class="shot shot--slide reveal">
-        <img src="../assets/img/kcapp-05.jpg" alt="用户调研方案与问卷数据分析" loading="lazy" />
-        <figcaption><b>调研与数据</b>明确调研背景、目的、内容、对象与方法，并对回收问卷做年龄、消费水平、偏好等维度的统计</figcaption>
-      </figure>
-      <figure class="shot shot--slide reveal">
-        <img src="../assets/img/kcapp-07.jpg" alt="用户研究七条结论" loading="lazy" />
-        <figcaption><b>研究结论</b>七条可执行结论——例如“多数被调查者对沿线国家咖啡文化所知寥寥”，直接成为咖趣模块的立项依据</figcaption>
-      </figure>
-      <figure class="shot shot--slide reveal">
-        <img src="../assets/img/kcapp-08.jpg" alt="两位用户画像" loading="lazy" />
-        <figcaption><b>用户画像</b>建立两个典型 persona，把行为动机、使用场景与痛点具体化</figcaption>
-      </figure>
-    </div>
-
-    <!-- 5.3 信息架构 -->
-    <div class="subhead reveal">
-      <span class="subhead__no">5.3</span>
-      <h3>信息架构</h3>
-      <p>需求分级 → 架构树 → 流程图 → 低保真原型</p>
-    </div>
-    <div class="gallery gallery--wide" data-lightbox data-stagger="0.07">
-      <figure class="shot shot--slide reveal">
-        <img src="../assets/img/kcapp-09.jpg" alt="需求列表分级表" loading="lazy" />
-        <figcaption><b>需求列表</b>把需求拆成「需求等级 / 需求点 / 功能 / 分区」四列，区分核心需求与一般需求，避免一次做太多</figcaption>
-      </figure>
-      <figure class="shot shot--slide reveal">
-        <img src="../assets/img/kcapp-10.jpg" alt="信息架构树状图" loading="lazy" />
-        <figcaption><b>架构树</b>四个一级模块向下展开到具体页面，控制层级深度</figcaption>
-      </figure>
-      <figure class="shot shot--slide reveal">
-        <img src="../assets/img/kcapp-11.jpg" alt="购买咖啡用户流程图" loading="lazy" />
-        <figcaption><b>用户流程图</b>以“购买咖啡”为案例，走通从进入咖屋、选择分区、查看详情到加入购物车与提交订单的完整路径</figcaption>
-      </figure>
-      <figure class="shot shot--slide reveal">
-        <img src="../assets/img/kcapp-12.jpg" alt="低保真原型图全貌" loading="lazy" />
-        <figcaption><b>原型图</b>低保真线框覆盖全部主要页面，并用连线标出跳转关系</figcaption>
-      </figure>
-    </div>
-
-    <!-- 5.4 设计规范 -->
-    <div class="subhead reveal">
-      <span class="subhead__no">5.4</span>
-      <h3>设计规范</h3>
-      <p>图标、导航模式、色彩与字号体系</p>
-    </div>
-    <div class="gallery gallery--wide" data-lightbox data-stagger="0.07">
-      <figure class="shot shot--slide reveal">
-        <img src="../assets/img/kcapp-13.jpg" alt="图标说明与品牌色" loading="lazy" />
-        <figcaption><b>图标说明</b>咖啡杯 Logo、咖啡豆吉祥物与四个模块图标；主色 #56432E、点睛色 #EDDE29</figcaption>
-      </figure>
-      <figure class="shot shot--slide reveal">
-        <img src="../assets/img/kcapp-14.jpg" alt="抽屉式、顶部标签式、底部标签式导航" loading="lazy" />
-        <figcaption><b>导航模式（一）</b>抽屉式用于分类跳转，顶部标签式切换内容流，底部标签式承载四个一级模块</figcaption>
-      </figure>
-      <figure class="shot shot--slide reveal">
-        <img src="../assets/img/kcapp-15.jpg" alt="列表菜单式导航" loading="lazy" />
-        <figcaption><b>导航模式（二）</b>列表菜单式用于咖屋的器具与礼品分区，大图配英文品类，强化质感</figcaption>
-      </figure>
-      <figure class="shot shot--slide reveal">
-        <img src="../assets/img/kcapp-16.jpg" alt="色彩与字号规范表" loading="lazy" />
-        <figcaption><b>色彩与字号</b>主色 / 辅助色 / 点睛色 / 基色四档色值与用途；字号从 22px 主标题递减到 8px 次要辅助文字，共七级</figcaption>
-      </figure>
-    </div>
-
-    <!-- 5.5 界面展示 -->
-    <div class="subhead reveal">
-      <span class="subhead__no">5.5</span>
-      <h3>界面展示</h3>
-      <p>高保真界面与交互演示</p>
-    </div>
-    <div class="gallery gallery--wide" data-lightbox data-stagger="0.07">
-      <figure class="shot shot--slide reveal">
-        <img src="../assets/img/kcapp-17.jpg" alt="APP 登录页高保真界面" loading="lazy" />
-        <figcaption><b>登录页</b>大面积留白 + 品牌 Logo 居中，点睛色只用在登录按钮上</figcaption>
-      </figure>
-      <figure class="shot shot--slide reveal">
-        <img src="../assets/img/kcapp-18.jpg" alt="咖趣与咖话界面" loading="lazy" />
-        <figcaption><b>咖趣 / 咖话</b>咖趣里查看喜欢的文章与视频；咖话里找到志同道合的朋友与兴趣话题</figcaption>
-      </figure>
-      <figure class="shot shot--slide reveal">
-        <img src="../assets/img/kcapp-19.jpg" alt="全部界面拼贴与交互演示" loading="lazy" />
-        <figcaption><b>界面全貌</b>主要页面拼贴展示，配合交互演示视频说明操作流程</figcaption>
-      </figure>
-    </div>
-  </section>
 
   <!-- ======================================================== 上下篇 -->
   <nav class="wrap pager" aria-label="项目导航">

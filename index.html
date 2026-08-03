@@ -48,7 +48,7 @@
           <p class="hero__desc reveal" style="--d:.34s">
             我在教育与技术的交界处工作：一边写代码，把模型和 Agent 变成能真正被使用的产品；
             一边用镜头和三维软件讲故事，让抽象的理念被看见。这里收录了我的网页与 APP 项目、
-            三维动画作品，以及广告影片。
+            三维动画、互动游戏，以及广告影片。
           </p>
 
           <div class="hero__actions reveal" style="--d:.42s">
@@ -73,9 +73,9 @@
 
       <div class="hero__stats reveal" style="--d:.5s" data-stagger="0">
         <div class="hero__stat"><b>07</b><span>精选项目</span></div>
-        <div class="hero__stat"><b>03</b><span>作品类别</span></div>
+        <div class="hero__stat"><b>04</b><span>作品类别</span></div>
         <div class="hero__stat"><b>60+</b><span>分镜镜头设计</span></div>
-        <div class="hero__stat"><b>13+</b><span>GitHub 开源仓库</span></div>
+        <div class="hero__stat"><b>15+</b><span>GitHub 开源仓库</span></div>
       </div>
     </div>
 
@@ -105,9 +105,6 @@
               我的专业方向是教育技术学，关注大语言模型架构与 Agent 应用如何落进真实的教与学场景。
               过去几年里，我做过面向咖啡文化的电商站点、面向企业组织的 AI 课程系统、
               基于 BERT 的教师教学能力画像平台，也独立完成过三维产品动画与广告影片的全流程制作。
-            </p>
-            <p class="ph">
-              （这段留给你补充：获奖情况、想找什么样的岗位。直接改这段文字即可。）
             </p>
           </div>
 
@@ -200,42 +197,47 @@
       <div class="section__head">
         <h2 class="section__title mask"><span>项目展示<em>Projects</em></span></h2>
         <p class="section__note reveal" style="--d:.1s">
-          按网页 / APP、动画、广告三类呈现。点击卡片进入详情页，
+          按网页 / 系统 / APP、动画、游戏、视频四类呈现。点击卡片进入详情页或对应仓库，
           可查看分镜脚本、制作过程与更多画面。
         </p>
+        <nav class="proj-tabs reveal" style="--d:.16s" aria-label="项目分类快速跳转">
+          <a class="proj-tab is-active" href="#cat-web">网页 / 系统 / APP</a>
+          <a class="proj-tab" href="#cat-anim">动画</a>
+          <a class="proj-tab" href="#cat-game">游戏</a>
+          <a class="proj-tab" href="#cat-video">视频</a>
+        </nav>
       </div>
 
-      <!-- ---------------------------------------- 类别一：网页 / APP -->
-      <div class="cat">
+      <!-- ---------------------------------------- 类别一：网页 / 系统 / APP -->
+      <div class="cat" id="cat-web">
         <div class="cat__head reveal">
           <span class="cat__no">01</span>
-          <h3 class="cat__name">网页 / APP</h3>
-          <span class="cat__count">4 Projects</span>
+          <h3 class="cat__name">网页 / 系统 / APP</h3>
+          <span class="cat__count">5 Projects</span>
         </div>
 
         <div class="cards" data-stagger="0.1">
 
-          <!-- 咖cool -->
+          <!-- personal-agent-foreman -->
           <article class="card reveal">
-            <a class="card__media" href="projects/kacool.html" aria-label="查看咖cool项目详情">
-              <span class="card__badge">网站 + APP 原型</span>
-              <img src="assets/img/kc-home.jpg" alt="咖cool 咖啡文化网站首页" loading="lazy" />
+            <a class="card__media" href="projects/agent-foreman.html" aria-label="查看个人 Agent 活动监工台项目详情">
+              <span class="card__badge">桌面工具 · 数据看板</span>
+              <img src="assets/img/agent-overview.jpg" alt="个人 Agent 活动监工台工作总览页面" loading="lazy" />
             </a>
             <div class="card__body">
-              <h4 class="card__title">咖cool 咖啡文化站点与 APP 原型</h4>
+              <h4 class="card__title">个人 Agent 活动监工台</h4>
               <div class="card__meta">
-                <span>2022</span><span>已开源</span><span>HTML / CSS / JS · ASP.NET</span>
+                <span>2026</span><span>GitHub · MIT</span><span>Python · AppKit</span>
               </div>
               <p class="card__desc">
-                围绕一带一路沿线的咖啡文化，以“为生活加点酷”为主张的品牌项目，产出两条线。
-                网站端：手写 HTML、CSS 与原生 JavaScript 完成五个栏目共八个页面，
-                注册登录基于 ASP.NET 与 SQL Server，已整理开源。
-                APP 端：从竞品 SWOT、问卷调研与用户画像出发，做出需求分级表、信息架构、
-                用户流程图与低保真原型，并沉淀出图标、导航、色彩与七级字号的设计规范。
+                同时使用 Codex、Qoder、Mulerun 等多个桌面 AI Agent 时，很难知道谁在干活、谁在等我回话。
+                于是我做了这个本地仪表盘：轮询五个 Agent 的会话数据源（SQLite / JSONL / 目录扫描），
+                用“开工 / 等回话 / 摸鱼”三态判定实时状态，并给出会话时间线、Skill 调用排行与每日总结。
+                服务端仅用 Python 标准库实现，另有 AppKit + WKWebView 的原生窗口版本。
               </p>
               <div class="card__foot">
-                <a class="arrow-link" href="projects/kacool.html">查看详情 <i></i></a>
-                <span class="tag">8 Pages + Prototype</span>
+                <a class="arrow-link" href="projects/agent-foreman.html">查看详情 <i></i></a>
+                <span class="tag">5 Agents</span>
               </div>
             </div>
           </article>
@@ -265,26 +267,51 @@
             </div>
           </article>
 
-          <!-- personal-agent-foreman -->
+          <!-- ai-meta-analysis / MetaReview AI -->
           <article class="card reveal">
-            <a class="card__media" href="projects/agent-foreman.html" aria-label="查看个人 Agent 活动监工台项目详情">
-              <span class="card__badge">桌面工具 · 数据看板</span>
-              <img src="assets/img/af-2.jpg" alt="个人 Agent 活动监工台每日监工页面" loading="lazy" />
+            <a class="card__media" href="https://github.com/GingerYang19/ai-meta-analysis" target="_blank" rel="noopener" aria-label="打开 MetaReview AI GitHub 仓库">
+              <span class="card__badge">AI + 科研 · 系统平台</span>
+              <img src="assets/img/ai-meta-analysis.jpg" alt="MetaReview AI 文献综述与元分析平台首页" loading="lazy" />
             </a>
             <div class="card__body">
-              <h4 class="card__title">个人 Agent 活动监工台</h4>
+              <h4 class="card__title">MetaReview AI 文献综述与元分析平台</h4>
               <div class="card__meta">
-                <span>2026</span><span>GitHub · MIT</span><span>Python · AppKit</span>
+                <span>2026</span><span>GitHub · MIT</span><span>FastAPI · SQLite</span>
               </div>
               <p class="card__desc">
-                同时使用 Codex、Qoder、Mulerun 等多个桌面 AI Agent 时，很难知道谁在干活、谁在等我回话。
-                于是我做了这个本地仪表盘：轮询五个 Agent 的会话数据源（SQLite / JSONL / 目录扫描），
-                用“开工 / 等回话 / 摸鱼”三态判定实时状态，并给出会话时间线、Skill 调用排行与每日总结。
-                服务端仅用 Python 标准库实现，另有 AppKit + WKWebView 的原生窗口版本。
+                面向研究者的 AI 辅助系统性文献综述（Systematic Review）与元分析平台。
+                支持 RIS 批量导入与自动去重，基于纳入 / 排除标准由 AI 自动筛选标题摘要与全文并给出决策与置信度，
+                再由人工逐篇复核、追踪人机一致性，最终自动生成符合 PRISMA 2020 标准的文献筛选流程图。
+                后端采用 FastAPI + SQLAlchemy，以 OpenAI 兼容接口驱动筛选。
               </p>
               <div class="card__foot">
-                <a class="arrow-link" href="projects/agent-foreman.html">查看详情 <i></i></a>
-                <span class="tag">5 Agents</span>
+                <a class="arrow-link" href="https://github.com/GingerYang19/ai-meta-analysis" target="_blank" rel="noopener">查看 GitHub 仓库 <i></i></a>
+                <span class="tag">FastAPI · OpenAI</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 咖cool -->
+          <article class="card reveal">
+            <a class="card__media" href="projects/kacool.html" aria-label="查看咖cool项目详情">
+              <span class="card__badge">APP 原型 + 网站</span>
+              <img src="assets/img/kacool-app-cover.jpg" alt="咖cool APP 原型界面一览" loading="lazy" />
+            </a>
+            <div class="card__body">
+              <h4 class="card__title">咖cool 咖啡文化站点与 APP 原型</h4>
+              <div class="card__meta">
+                <span>2022</span><span>已开源</span><span>HTML / CSS / JS · ASP.NET</span>
+              </div>
+              <p class="card__desc">
+                围绕一带一路沿线的咖啡文化，以“为生活加点酷”为主张的品牌项目，产出两条线。
+                APP 端：从竞品 SWOT、问卷调研与用户画像出发，做出需求分级表、信息架构、
+                用户流程图与低保真原型，并沉淀出图标、导航、色彩与七级字号的设计规范。
+                网站端：手写 HTML、CSS 与原生 JavaScript 完成五个栏目共八个页面，
+                注册登录基于 ASP.NET 与 SQL Server，已整理开源。
+              </p>
+              <div class="card__foot">
+                <a class="arrow-link" href="projects/kacool.html">查看详情 <i></i></a>
+                <span class="tag">8 Pages + Prototype</span>
               </div>
             </div>
           </article>
@@ -293,7 +320,7 @@
           <article class="card reveal">
             <a class="card__media" href="projects/teacher-portrait.html" aria-label="查看教师在线教学能力评价系统项目详情">
               <span class="card__badge">AI + 教育 · 数据分析</span>
-              <img src="assets/img/tp-4.jpg" alt="教师教学能力画像 AI 分析页面" loading="lazy" />
+              <img src="assets/img/02_distribution.png" alt="教师教学能力画像 AI 分析页面" loading="lazy" />
             </a>
             <div class="card__body">
               <h4 class="card__title">教师在线教学能力评价系统</h4>
@@ -319,7 +346,7 @@
       </div>
 
       <!-- ---------------------------------------------- 类别二：动画 -->
-      <div class="cat">
+      <div class="cat" id="cat-anim">
         <div class="cat__head reveal">
           <span class="cat__no">02</span>
           <h3 class="cat__name">动画</h3>
@@ -339,7 +366,7 @@
               </span></span>
             </a>
             <div class="card__body">
-              <h4 class="card__title">CEE Mouse 动画设计《三个零》</h4>
+              <h4 class="card__title">CEE Mouse 动画设计</h4>
               <div class="card__meta">
                 <span>2023</span><span>课程设计 · 三人小组</span><span>3ds Max · 1080p / 64s</span>
               </div>
@@ -359,11 +386,93 @@
         </div>
       </div>
 
-      <!-- ---------------------------------------------- 类别三：广告 -->
-      <div class="cat">
+      <!-- ---------------------------------------------- 类别三：游戏 -->
+      <div class="cat" id="cat-game">
         <div class="cat__head reveal">
           <span class="cat__no">03</span>
-          <h3 class="cat__name">广告</h3>
+          <h3 class="cat__name">游戏</h3>
+          <span class="cat__count">3 Projects</span>
+        </div>
+
+        <div class="cards" data-stagger="0.1">
+
+          <!-- orienteering-is-fun -->
+          <article class="card reveal">
+            <a class="card__media" href="https://github.com/GingerYang19/orienteering-is-fun" target="_blank" rel="noopener" aria-label="打开 Orienteering is Fun GitHub 仓库">
+              <span class="card__badge">3D 网页游戏 · 定向越野</span>
+              <img src="assets/img/game-orienteering.jpg" alt="Orienteering is Fun 定向越野游戏首页" loading="lazy" />
+            </a>
+            <div class="card__body">
+              <h4 class="card__title">Orienteering is Fun 定向越野</h4>
+              <div class="card__meta">
+                <span>2026</span><span>GitHub</span><span>Three.js · TypeScript</span>
+              </div>
+              <p class="card__desc">
+                浏览器端第一人称 3D 定向越野游戏——没有导航箭头，只靠读地形、正地图、选路线去找到正确的检查点。
+                同一套确定性地形同时驱动 3D 世界、赛道与 2D 定向地图；内置冲刺 / 中距离 / 长距离 / 百米 / 积分五种赛制、
+                五大地形区域与每日每周种子挑战，并提供成绩记录、分段计时、路线回放与多人竞赛基础。
+              </p>
+              <div class="card__foot">
+                <a class="arrow-link" href="https://github.com/GingerYang19/orienteering-is-fun" target="_blank" rel="noopener">查看 GitHub 仓库 <i></i></a>
+                <span class="tag">Three.js</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- the-last-screening -->
+          <article class="card reveal">
+            <a class="card__media" href="https://github.com/GingerYang19/the-last-screening" target="_blank" rel="noopener" aria-label="打开《最后的放映》GitHub 仓库">
+              <span class="card__badge">氛围推理游戏</span>
+              <img src="assets/img/game-last-screening.jpg" alt="《最后的放映》胶片风格氛围推理游戏画面" loading="lazy" />
+            </a>
+            <div class="card__body">
+              <h4 class="card__title">《最后的放映》The Last Screening</h4>
+              <div class="card__meta">
+                <span>2026</span><span>GitHub</span><span>Next.js · TypeScript</span>
+              </div>
+              <p class="card__desc">
+                1937 年上海片场的一桩悬案。胶片质感的氛围推理游戏，向《奥伯拉丁的回归》《婆罗洲的红珍珠》致意——
+                在定格的片场时刻与人物证词之间反复比对，推断每个人的身份、关系与最终结局。基于 Next.js 构建，
+                以光影、噪点与配乐营造老电影的沉浸氛围。
+              </p>
+              <div class="card__foot">
+                <a class="arrow-link" href="https://github.com/GingerYang19/the-last-screening" target="_blank" rel="noopener">查看 GitHub 仓库 <i></i></a>
+                <span class="tag">Next.js</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ai-learning-world-explore -->
+          <article class="card reveal">
+            <a class="card__media" href="https://github.com/GingerYang19/ai-learning-world-explore" target="_blank" rel="noopener" aria-label="打开 AI 学习世界 探索版 GitHub 仓库">
+              <span class="card__badge">3D 体素学习游戏</span>
+              <img src="assets/img/game-ai-world.png" alt="AI 学习世界 探索版 体素开放世界画面" loading="lazy" />
+            </a>
+            <div class="card__body">
+              <h4 class="card__title">AI 学习世界 · 探索版</h4>
+              <div class="card__meta">
+                <span>2026</span><span>GitHub · MIT</span><span>Three.js · Electron</span>
+              </div>
+              <p class="card__desc">
+                基于 Three.js 的 3D 体素探索学习游戏——在 Minecraft 风格的开放世界里穿行九种生态群系，
+                通过发现宝箱解锁 11 个 AI 学习模块（AI 认知、智能办公、智能体搭建、行业专题等）并完成考核。
+                含像素风工具、AI 助手伙伴、NPC 引导、经验等级与天气系统，支持浏览器单机、服务端云存档与 Windows / macOS 桌面版。
+              </p>
+              <div class="card__foot">
+                <a class="arrow-link" href="https://github.com/GingerYang19/ai-learning-world-explore" target="_blank" rel="noopener">查看 GitHub 仓库 <i></i></a>
+                <span class="tag">Three.js · Electron</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- ---------------------------------------------- 类别四：视频 -->
+      <div class="cat" id="cat-video">
+        <div class="cat__head reveal">
+          <span class="cat__no">04</span>
+          <h3 class="cat__name">视频</h3>
           <span class="cat__count">2 Projects</span>
         </div>
 
@@ -418,7 +527,7 @@
                 <span>2022</span><span>公益广告</span><span>30 镜 / 2′29″</span>
               </div>
               <p class="card__desc">
-                主题是“放下手机”。我们发现，不是人们在玩手机，而是手机在玩人们，
+                南邮公益广告，主题是“放下手机”。我们发现，不是人们在玩手机，而是手机在玩人们，
                 而当人真正意识到这一点时，已经很难甩掉它了。为了避开同类作品里用滥的场景，
                 我们专门设计了具有前后反差的戏剧结构：低头刷手机导致水杯溢出、
                 在美颜相机里自拍却认不出镜中的自己、刷到的奶茶其实是自己上次喝过的，
@@ -540,10 +649,6 @@
           <p class="contact__lead reveal">
             如果你觉得我们可以一起做点有意思的事，<br />随时来找我。
           </p>
-          <p class="contact__desc reveal" style="--d:.08s">
-            实习、项目合作、或者只是想聊聊 AI 与教育，都欢迎。
-            工作日一般 24 小时内回复。
-          </p>
 
           <div class="contact__list reveal" style="--d:.14s">
             <div class="contact__row">
@@ -582,16 +687,12 @@
           <h3>简历下载</h3>
           <p>
             完整版简历包含教育背景、实习经历、项目细节与技能清单，
-            PDF 格式，约 1—2 页。
+            PDF 格式。
           </p>
           <a class="btn" href="assets/files/杨可欣-简历.pdf" download>
             下载简历 PDF
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 1.5v9M4.5 7l3.5 3.5L11.5 7M2.5 13.5h11"/></svg>
           </a>
-          <p class="resume__hint">
-            提示：把简历文件放到 <code>assets/files/</code> 目录下，命名为
-            <code>杨可欣-简历.pdf</code>，此按钮即可生效。
-          </p>
         </aside>
       </div>
     </div>
