@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CEE Mouse 动画设计《三个零》| 杨可欣作品集</title>
+<meta name="description" content="CEE 鼠标三维产品演示动画：3ds Max 建模、材质渲染与镜头动画，用零延迟、零阻力、零分贝三张字幕卡串起卖点。" />
+<meta name="theme-color" content="#faf9f7" />
+<link rel="stylesheet" href="../assets/css/style.css" />
+<link rel="stylesheet" href="../assets/css/detail.css" />
+</head>
+<body>
+
+<div class="progress" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="../index.html">杨可欣 <small>Portfolio</small></a>
+    <nav class="nav__links" aria-label="主导航">
+      <a class="nav__link" href="../index.html#about">关于我<small>About me</small></a>
+      <a class="nav__link is-active" href="../index.html#projects">项目展示<small>Projects</small></a>
+      <a class="nav__link" href="../index.html#experience">实习经历<small>Experience</small></a>
+      <a class="nav__link" href="../index.html#contact">联系我<small>Contact me</small></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="detail-hero">
+    <div class="wrap">
+      <a class="crumb" href="../index.html#projects">
+        <svg viewBox="0 0 16 16"><path d="M10 3L5 8l5 5"/></svg>
+        返回项目列表
+      </a>
+
+      <p class="detail-hero__cat">动画 · 01</p>
+      <h1 class="detail-hero__title mask"><span>CEE Mouse 动画设计《三个零》</span></h1>
+      <p class="detail-hero__sub reveal" style="--d:.12s">
+        一支 64 秒的三维产品演示动画。产品是一款无线鼠标，
+        我们要回答的问题是：怎么让观众在一分钟里既看清它的内部结构，又记住它的三个卖点。
+      </p>
+
+      <dl class="facts reveal" style="--d:.2s">
+        <div class="fact"><dt>年份</dt><dd>2023</dd></div>
+        <div class="fact"><dt>类型</dt><dd>课程设计 · 三人小组</dd></div>
+        <div class="fact"><dt>我的分工</dt><dd>脚本 / 建模 / 动画 / 后期</dd></div>
+        <div class="fact"><dt>软件</dt><dd>3ds Max 2022</dd></div>
+        <div class="fact"><dt>成片</dt><dd>1920×1080 · 30fps · 64s</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 成片 -->
+  <section class="wrap">
+    <div class="stage zoom-in">
+      <video src="../assets/video/cee-mouse.mp4" poster="../assets/img/poster-cee.jpg"
+             controls playsinline preload="metadata"
+             controlslist="nodownload noremoteplayback" disablepictureinpicture oncontextmenu="return false"></video>
+    </div>
+    <p class="stage__note reveal">完整成片 · 64 秒（1080p）</p>
+  </section>
+
+  <!-- 创意 -->
+  <section class="chapter wrap">
+    <div class="chapter__head reveal">
+      <span class="chapter__no">01</span>
+      <h2 class="chapter__title">创意与结构<em>Concept</em></h2>
+    </div>
+
+    <div class="prose reveal">
+      <p>
+        产品演示动画最容易犯的错，是把它做成一段“转体展示”——模型绕着 Y 轴转一圈，
+        好看但什么也没说。我们决定反过来做：<strong>先说主张，再用结构证明它</strong>。
+      </p>
+      <p>
+        于是全片被拆成三段，每段由一张字幕卡领起，随后用一组镜头解释它凭什么成立：
+      </p>
+      <ul>
+        <li><strong>零延迟 ZERO LATENCY</strong> — 切到内部电路板与光学传感器，用红色光线示意光路与信号回传</li>
+        <li><strong>零阻力 ZERO RESISTANCE</strong> — 滚轮轴承与滚花特写，落在手感与顺滑度</li>
+        <li><strong>零分贝 ZERO DECIBEL</strong> — 壳体与按键结构剖面，说明静音的来源</li>
+      </ul>
+      <p>
+        三段之间用“全环保材料”“全新技术打造羽量级无感鼠标”一类短字幕做呼吸点，
+        拆解镜头里还标了 <code>-4.3G</code>、<code>-0.3G</code> 的减重数据，
+        避免信息密度一路拉满。
+      </p>
+    </div>
+  </section>
+  
+  <!-- 镜头脚本 -->
+  <section class="chapter wrap">
+    <div class="chapter__head reveal">
+      <span class="chapter__no">02</span>
+      <h2 class="chapter__title">镜头脚本与节奏表<em>Shot List</em></h2>
+    </div>
+  
+    <div class="prose reveal" style="margin-bottom:24px">
+      <p>
+        本片为三维渲染作品，前期以文字脚本定下镜头顺序与时长分配（我与刘平负责脚本），
+        再由摄像机动画逐段实现。下表按成片时间轴整理，对应脚本里的每个镜头单元及其叙事作用。
+      </p>
+    </div>
+  
+    <div class="board-wrap reveal">
+      <p class="board-hint">← 表格可左右滑动查看完整内容 →</p>
+      <div class="board-scroll">
+        <table class="board">
+          <colgroup>
+            <col style="width:10%" /><col style="width:12%" /><col style="width:52%" /><col style="width:26%" />
+          </colgroup>
+          <thead>
+            <tr><th>段落</th><th>时间码</th><th>画面</th><th>叙事作用</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="no">开场</td><td class="sm">00:00</td><td>暗场中鼠标侧影，灯光缓慢扫过轮廓</td><td class="sm">建立质感与情绪</td></tr>
+            <tr><td class="no">外观</td><td class="sm">00:08</td><td>白底环境，侧视到俯视的外观巡览</td><td class="sm">交代产品全貌</td></tr>
+            <tr><td class="no">材质</td><td class="sm">00:16</td><td>“全环保材料”字幕 + 零件横向排开</td><td class="sm">第一个主张落地</td></tr>
+            <tr><td class="no">拆解</td><td class="sm">00:20</td><td>上下壳、滚轮、内部零件依次炸开分离，同步标注 -4.3G / -0.3G 减重数据</td><td class="sm">用结构支撑轻量化</td></tr>
+            <tr><td class="no">透视</td><td class="sm">00:28</td><td>推入内部，电路板与元件特写</td><td class="sm">从外观转向内在</td></tr>
+            <tr><td class="no">原理</td><td class="sm">00:36</td><td>光学传感器光路示意（红色激光线进出）</td><td class="sm">解释“零延迟”</td></tr>
+            <tr><td class="no">部件</td><td class="sm">00:41</td><td>“优质轴承”字幕 + 滚轮轴承与电路板特写</td><td class="sm">解释“零阻力”</td></tr>
+            <tr><td class="no">字幕卡</td><td class="sm">00:48</td><td>“零延迟 / 零阻力 / 零分贝”三张字幕卡依次压在壳体上</td><td class="sm">三个卖点收束</td></tr>
+            <tr><td class="no">配色</td><td class="sm">00:56</td><td>白色版与深灰版成品渲染并置</td><td class="sm">展示可选方案</td></tr>
+            <tr><td class="no">片尾</td><td class="sm">01:02</td><td>片尾字幕：建模 / 材质 / 脚本 / 动画 / 后期分工与指导老师</td><td class="sm">收尾署名</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="board-note">时间码依据成片时间轴校对；全片共 64 秒，1920×1080、30fps。</p>
+    </div>
+  </section>
+  
+  <!-- 制作过程 -->
+  <section class="chapter wrap">
+    <div class="chapter__head reveal">
+      <span class="chapter__no">03</span>
+      <h2 class="chapter__title">制作过程<em>Process</em></h2>
+    </div>
+
+    <div class="steps" data-stagger="0.08">
+      <div class="step reveal">
+        <div class="step__no">01</div>
+        <div>
+          <h4>参考与拆解</h4>
+          <p>
+            先收集实物鼠标的三视图与拆机图，把它拆成上层壳、内层壳、底板、滚轮、
+            按键、电路板、传感器七个部件，明确每个部件在动画里要不要单独出镜——
+            这决定了建模精度该花在哪。
+          </p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step__no">02</div>
+        <div>
+          <h4>样条线起形</h4>
+          <p>
+            鼠标外壳是典型的自由曲面，直接用几何体拼不出来。
+            做法是先用样条线（Line / Circle）在三个视图里勾出截面轮廓，
+            再放样与挤出成基础曲面，保证左右对称与握感弧度。
+          </p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step__no">03</div>
+        <div>
+          <h4>结构细化</h4>
+          <p>
+            用挤出、倒角、布尔运算开出按键缝隙、散热孔、滚轮槽与接口位，
+            再叠加平滑细分让曲面达到产品级精度。
+            滚轮的滚花通过阵列细密的凸起做出，特写镜头下才立得住。
+          </p>
+          <p>
+            这一步最费时间：布尔之后要手动清理破面与多余顶点，
+            否则渲染时会出现难看的黑边。
+          </p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step__no">04</div>
+        <div>
+          <h4>材质与布光</h4>
+          <p>
+            外壳用磨砂塑料，按键与滚轮金属圈用高光金属，
+            电路板贴图配合自发光元件。灯光以三点布光为底，
+            再加一盏扫光负责开场镜头里那条沿轮廓滑过的高光带。
+          </p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step__no">05</div>
+        <div>
+          <h4>摄像机动画</h4>
+          <p>
+            全片不靠模型自转，而是让摄像机移动：环绕、推近、拉出与俯视切换。
+            零件炸开用位移关键帧配合缓入缓出曲线，
+            让分离动作有“被拆开”的重量感而不是生硬平移。
+          </p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step__no">06</div>
+        <div>
+          <h4>渲染与后期</h4>
+          <p>
+            分段渲染输出序列，再在剪辑软件里拼接、调色、添加字幕卡与转场，
+            配上节奏匹配的背景音乐，最后压制为 1080p 成片。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 图集 -->
+  <section class="chapter wrap">
+    <div class="chapter__head reveal">
+      <span class="chapter__no">04</span>
+      <h2 class="chapter__title">建模与画面<em>Gallery</em></h2>
+    </div>
+
+    <div class="gallery" data-lightbox data-stagger="0.07">
+      <figure class="shot reveal">
+        <img src="../assets/img/cee-1.jpg" alt="3ds Max 中内层壳建模视图" loading="lazy" />
+        <figcaption><b>内层壳建模</b>3ds Max 2022 工作视图，可见按键孔位与滚轮槽的开孔结构，右侧为对象列表</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="../assets/img/cee-2.jpg" alt="上层壳曲面透视视图" loading="lazy" />
+        <figcaption><b>上层壳曲面</b>透视视图下的壳体弧度与定位柱，平滑细分后的表面精度</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="../assets/img/cee-still-explode.jpg" alt="零件炸开展示" loading="lazy" />
+        <figcaption><b>零件炸开</b>上下壳与内部结构逐层分离，画面右侧同步标注减重数据</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="../assets/img/cee-still-inner.jpg" alt="内部电路板特写" loading="lazy" />
+        <figcaption><b>内部透视</b>单独抽出的电路板与传感器模组，浅灰背景突出元件细节</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="../assets/img/cee-still-sensor.jpg" alt="光学传感器光路示意" loading="lazy" />
+        <figcaption><b>传感器原理</b>用红色光线示意光学传感的入射与反射路径</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="../assets/img/cee-still-bearing.jpg" alt="滚轮轴承与电路板特写" loading="lazy" />
+        <figcaption><b>优质轴承</b>滚轮轴承与电路板的装配关系，支撑“零阻力”的主张</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="../assets/img/cee-4.jpg" alt="滚轮金属滚花特写渲染" loading="lazy" />
+        <figcaption><b>滚轮特写</b>金属滚花的密集纹理与高光，检验建模与材质精度的镜头</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="../assets/img/cee-5.jpg" alt="零延迟字幕卡" loading="lazy" />
+        <figcaption><b>零延迟 ZERO LATENCY</b>字幕卡压在浅色壳体上，弱化背景对比让文字清晰</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="../assets/img/cee-6.jpg" alt="零阻力字幕卡" loading="lazy" />
+        <figcaption><b>零阻力 ZERO RESISTANCE</b>透过半透壳体隐约露出红色传感器，形成层次</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="../assets/img/cee-7.jpg" alt="零分贝字幕卡" loading="lazy" />
+        <figcaption><b>零分贝 ZERO DECIBEL</b>底壳视角收尾，三张卡片构成统一的视觉系统</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="../assets/img/cee-3.jpg" alt="成品渲染图" loading="lazy" />
+        <figcaption><b>成品渲染</b>白底四分之三视角，散热孔、按键缝隙与滚轮细节完整呈现</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 分工 -->
+  <section class="chapter wrap">
+    <div class="chapter__head reveal">
+      <span class="chapter__no">05</span>
+      <h2 class="chapter__title">团队分工<em>Credits</em></h2>
+    </div>
+
+    <div class="files reveal">
+      <div class="file">
+        <span class="file__name">脚本</span>
+        <span class="file__meta">杨可欣、刘平</span>
+      </div>
+      <div class="file">
+        <span class="file__name">建模</span>
+        <span class="file__meta">刘平、杨可欣、陈馨</span>
+      </div>
+      <div class="file">
+        <span class="file__name">材质</span>
+        <span class="file__meta">陈馨、刘平</span>
+      </div>
+      <div class="file">
+        <span class="file__name">动画</span>
+        <span class="file__meta">刘平、杨可欣、陈馨</span>
+      </div>
+      <div class="file">
+        <span class="file__name">后期</span>
+        <span class="file__meta">杨可欣、陈馨</span>
+      </div>
+      <div class="file">
+        <span class="file__name">指导老师</span>
+        <span class="file__meta">霍智勇</span>
+      </div>
+    </div>
+  </section>
+
+  <nav class="wrap pager" aria-label="项目导航">
+    <a href="teacher-portrait.html">
+      <span>上一个项目</span>
+      <b>教师在线教学能力评价系统</b>
+    </a>
+    <a href="wahaha-cola.html">
+      <span>下一个项目</span>
+      <b>娃哈哈非常可乐《非常时刻》</b>
+    </a>
+  </nav>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div>
+      <div class="footer__name">杨可欣 · Kexin Yang</div>
+      <div class="footer__meta">教育技术 / 数字媒体设计 / AI 应用</div>
+    </div>
+    <nav class="footer__links" aria-label="页脚导航">
+      <a href="../index.html#projects">全部项目</a>
+      <a href="../index.html#contact">联系我</a>
+      <a href="https://github.com/GingerYang19" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

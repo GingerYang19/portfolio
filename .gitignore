@@ -1,0 +1,25 @@
+# ===== 只提交部署所需的作品集站点 =====
+# 站点文件：index.html、assets/、projects/、.nojekyll
+
+# --- 源素材文件夹（已处理副本在 assets/ 内，无需入库） ---
+CEE Mouse动画设计/
+公益广告/
+娃哈哈非常可乐广告片/
+咖cool/
+个人照片.jpg
+IMG_7469.JPG
+
+# --- 视频编码中间产物 ---
+assets/video/*.new.mp4
+ffmpeg2pass-*.log
+ffmpeg2pass-*.log.mbtree
+
+# --- 简历占位说明页（正式 PDF 保留） ---
+assets/files/.resume-placeholder.html
+
+# --- 系统 / 编辑器 ---
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/

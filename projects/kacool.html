@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>咖cool 咖啡文化站点与 APP 原型 | 杨可欣作品集</title>
+<meta name="description" content="咖cool：面向一带一路沿线咖啡文化的品牌项目，包含 8 页可交互网站（已开源）与一套完整的 APP 原型设计——用户研究、信息架构、设计规范与界面展示。" />
+<meta name="theme-color" content="#faf9f7" />
+<link rel="stylesheet" href="../assets/css/style.css" />
+<link rel="stylesheet" href="../assets/css/detail.css" />
+</head>
+<body>
+
+<div class="progress" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="../index.html">杨可欣 <small>Portfolio</small></a>
+    <nav class="nav__links" aria-label="主导航">
+      <a class="nav__link" href="../index.html#about">关于我<small>About me</small></a>
+      <a class="nav__link is-active" href="../index.html#projects">项目展示<small>Projects</small></a>
+      <a class="nav__link" href="../index.html#experience">实习经历<small>Experience</small></a>
+      <a class="nav__link" href="../index.html#contact">联系我<small>Contact me</small></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ======================================================== 详情首屏 -->
+  <section class="detail-hero">
+    <div class="wrap">
+      <a class="crumb" href="../index.html#projects">
+        <svg viewBox="0 0 16 16"><path d="M10 3L5 8l5 5"/></svg>
+        返回项目列表
+      </a>
+
+      <p class="detail-hero__cat">网页 / APP · 01</p>
+      <h1 class="detail-hero__title mask"><span>咖cool 咖啡文化站点与 APP 原型</span></h1>
+      <p class="detail-hero__sub reveal" style="--d:.12s">
+        “为生活加点酷 / Add cool to life”。围绕一带一路沿线的咖啡文化，
+        我做了两件事：一套可交互的电商网站，和一套从用户研究走到界面规范的完整 APP 原型设计。
+      </p>
+
+      <div class="detail-hero__actions reveal" style="--d:.16s">
+        <a class="btn btn--solid" href="https://gingeryang19.github.io/kacool-website/" target="_blank" rel="noopener">
+          访问在线网站
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3h7v7M13 3L5 11M3 7v6h6"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="https://github.com/GingerYang19/kacool-website" target="_blank" rel="noopener">GitHub 仓库</a>
+      </div>
+
+      <dl class="facts reveal" style="--d:.2s">
+        <div class="fact"><dt>年份</dt><dd>2022</dd></div>
+        <div class="fact"><dt>角色</dt><dd>品牌 / 交互 / 前端 / 后端</dd></div>
+        <div class="fact"><dt>交付物</dt><dd>网站 8 页 + APP 原型方案</dd></div>
+        <div class="fact"><dt>技术</dt><dd>HTML · CSS · JS · ASP.NET</dd></div>
+        <div class="fact">
+          <dt>在线网站</dt>
+          <dd><a href="https://gingeryang19.github.io/kacool-website/" target="_blank" rel="noopener">GitHub Pages ↗</a></dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ======================================================== 主视觉 -->
+  <section class="wrap">
+    <div class="stage zoom-in">
+      <img src="../assets/img/kc-home.jpg" alt="咖cool 网站首页整体视觉" />
+    </div>
+    <p class="stage__note reveal">
+      网站首页 · 截图取自已部署的在线站点
+      <a href="https://gingeryang19.github.io/kacool-website/" target="_blank" rel="noopener">gingeryang19.github.io/kacool-website</a>
+    </p>
+  </section>
+
+  <!-- ======================================================== 项目概览 -->
+  <section class="chapter wrap">
+    <div class="chapter__head reveal">
+      <span class="chapter__no">01</span>
+      <h2 class="chapter__title">项目概览<em>Overview</em></h2>
+    </div>
+
+    <div class="duo">
+      <div class="prose reveal">
+        <p>
+          国内咖啡文化尚处萌芽阶段，而咖啡消费需求正以每年约 <strong>20%</strong> 的速度增长，
+          一个潜力巨大的市场正在“新丝路”上崭露头角。但当时国内缺少专门的平台，
+          把一带一路沿线国家的咖啡产地与中国消费者直接对接起来。
+        </p>
+        <p>
+          咖cool 想同时解决“看懂”和“买到”：先用内容让人对咖啡产生兴趣，再自然地走到购买。
+          所以信息架构不是常见的“首页 + 商品列表”，而是四个并列入口——
+          <strong>咖趣</strong>做文化科普，<strong>咖屋</strong>放商品与器具，
+          <strong>咖话</strong>承载社区与话题，<strong>个人中心</strong>处理账户与订单。
+        </p>
+        <p>
+          项目最终产出两条线：一条是可以真实点开、跑得起来的<strong>网站</strong>；
+          另一条是按完整交互设计流程走完的<strong>APP 原型</strong>。
+        </p>
+      </div>
+      <div class="prose reveal" style="--d:.1s">
+        <h4 style="margin-top:0">两条交付线</h4>
+        <ul>
+          <li><strong>网站（已开源）</strong>：8 个页面，纯手写 HTML / CSS / 原生 JavaScript，
+            注册登录基于 ASP.NET + SQL Server</li>
+          <li><strong>APP 原型</strong>：项目背景 → 竞品分析 → 用户研究 → 信息架构 →
+            设计规范 → 界面展示，共 6 个阶段</li>
+        </ul>
+        <h4>我负责的部分</h4>
+        <ul>
+          <li>品牌命名、Logo 设计与动态标识（AE 动画）</li>
+          <li>整站信息架构与页面视觉设计</li>
+          <li>网站全部前端实现与交互逻辑</li>
+          <li>注册登录后端与数据库</li>
+          <li>APP 端用户研究、信息架构、设计规范与界面设计</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== 品牌 -->
+  <section class="chapter wrap">
+    <div class="chapter__head reveal">
+      <span class="chapter__no">02</span>
+      <h2 class="chapter__title">品牌与动态标识<em>Brand</em></h2>
+    </div>
+
+    <div class="duo">
+      <div class="prose reveal">
+        <p>
+          品牌名“咖cool”取“咖啡”与 cool 的双关，中英混排既有亲和力，
+          又留出年轻化的表达空间。中文用手写风格字体，配花体英文 slogan
+          “Add cool to life”。
+        </p>
+        <p>
+          主色取自烘焙后的咖啡豆——<code>#56432E</code>；点睛色取自杯口奶泡的光泽——
+          <code>#EDDE29</code>。这套配色在网站与 APP 两条线上保持一致，
+          Logo 的黄色咖啡杯也贯穿始终。
+        </p>
+        <p>
+          Logo 另做了一版动态标识，用于 APP 启动页与网站加载页：
+          文字逐笔浮现、杯中热气升腾，收尾停在完整标志上。站内
+          <code>加载中....html</code> 就是它的过场页面。
+        </p>
+      </div>
+      <div class="reveal" style="--d:.1s">
+        <div class="stage stage--tall">
+          <video src="../assets/video/kacool-logo.mp4"
+                 poster="../assets/img/poster-kacool-logo.jpg"
+                 controls muted loop playsinline preload="metadata"
+                 controlslist="nodownload noremoteplayback" disablepictureinpicture oncontextmenu="return false"></video>
+        </div>
+        <p class="stage__note">动态标识 · 8 秒循环（AE 制作）</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== 网站页面 -->
+  <section class="chapter wrap">
+    <div class="chapter__head reveal">
+      <span class="chapter__no">03</span>
+      <h2 class="chapter__title">网站 · 页面一览<em>Website</em></h2>
+    </div>
+
+    <div class="prose reveal" style="margin-bottom:26px">
+      <p>
+        以下 8 张截图均取自已部署的在线站点
+        <a href="https://gingeryang19.github.io/kacool-website/" target="_blank" rel="noopener">gingeryang19.github.io/kacool-website</a>，
+        桌面视口 1440×900。
+      </p>
+    </div>
+
+    <div class="gallery" data-lightbox data-stagger="0.07">
+      <figure class="shot reveal">
+        <img src="../assets/img/kc-home.jpg" alt="咖cool 首页" loading="lazy" />
+        <figcaption><b>首页</b>图标式一级导航、品牌横幅与三大板块入口，向下引导浏览</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="../assets/img/kc-shop.jpg" alt="咖屋商品列表页" loading="lazy" />
+        <figcaption><b>咖屋 · 商品列表</b>左侧三级分类树（经典咖啡馆 / 咖啡豆 / 咖啡用具）+ 主图轮播 + 专区卡片</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="../assets/img/kc-product.jpg" alt="咖啡商品详情页" loading="lazy" />
+        <figcaption><b>商品详情</b>多图预览切换、规格选择与加入购物车</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="../assets/img/kc-cart.jpg" alt="购物车列表页" loading="lazy" />
+        <figcaption><b>购物车</b>数量增减、单项小计与总价联动计算</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="../assets/img/kc-article.jpg" alt="文章详情页" loading="lazy" />
+        <figcaption><b>咖话 · 文章详情</b>长图文阅读排版，控制行宽与段落节奏</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="../assets/img/kc-login.jpg" alt="登录页" loading="lazy" />
+        <figcaption><b>登录</b>品牌色渐变背景 + 悬浮卡片表单</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="../assets/img/kc-register.jpg" alt="注册页" loading="lazy" />
+        <figcaption><b>注册</b>用户名 / 密码 / 确认密码，前端校验后由 ASP.NET 写入 SQL Server</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="../assets/img/kc-loading.jpg" alt="加载页" loading="lazy" />
+        <figcaption><b>加载页</b>复用动态标识作过场动画</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ======================================================== 网站实现 -->
+  <section class="chapter wrap">
+    <div class="chapter__head reveal">
+      <span class="chapter__no">04</span>
+      <h2 class="chapter__title">网站 · 技术实现<em>Build</em></h2>
+    </div>
+
+    <div class="steps" data-stagger="0.08">
+      <div class="step reveal">
+        <div class="step__no">01</div>
+        <div>
+          <h4>样式分层</h4>
+          <p>
+            CSS 按职责拆成 <code>reset.css</code>（重置）、<code>public.css</code>（通用）、
+            <code>nav.css</code>（导航）与各页面专用文件，公共部分只写一次，改一处全站生效。
+          </p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step__no">02</div>
+        <div>
+          <h4>交互实现</h4>
+          <p>
+            用原生 JavaScript 写轮播的自动播放与左右切换、分类侧栏的展开收起、
+            购物车的数量增减与价格联动，不依赖任何第三方库。
+          </p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step__no">03</div>
+        <div>
+          <h4>图标与字体</h4>
+          <p>
+            自建 <code>iconfont.ttf</code> 承载首页一级导航的五个图标，
+            保证不同分辨率下都清晰，也避免多张小图带来的额外请求。
+          </p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step__no">04</div>
+        <div>
+          <h4>账户功能与数据库</h4>
+          <p>
+            用 Visual Studio 建立 ASP.NET 项目，编写 <code>register.aspx</code> 与
+            <code>login.aspx</code> 的后台逻辑，连接 SQL Server 完成用户表的写入与校验。
+          </p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step__no">05</div>
+        <div>
+          <h4>整理开源</h4>
+          <p>
+            把项目整理后推到 GitHub：用 <code>.gitignore</code> 排除 ASP.NET 构建产物
+            （<code>bin/</code>、<code>obj/</code>、<code>packages/</code>）与数据库文件，
+            仓库里只留源码、样式、脚本与素材。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== APP 原型 -->
+  <section class="chapter wrap">
+    <div class="chapter__head reveal">
+      <span class="chapter__no">05</span>
+      <h2 class="chapter__title">APP 原型设计<em>App Prototype</em></h2>
+    </div>
+
+    <div class="prose reveal" style="margin-bottom:10px">
+      <p>
+        咖cool APP 是一款关于咖啡的生活类应用，包含<strong>咖话、咖屋、咖趣</strong>等模块，
+        以介绍一带一路沿线的咖啡文化、售卖咖啡相关产品为主要功能，咖啡爱好者可以在这里学习、交流与分享。
+      </p>
+      <p>
+        整个方案按交互设计的标准流程走完六个阶段，下面按阶段呈现关键产出。
+      </p>
+    </div>
+
+    <!-- 5.1 背景与竞品 -->
+    <div class="subhead reveal">
+      <span class="subhead__no">5.1</span>
+      <h3>项目背景与竞品分析</h3>
+      <p>先弄清市场缺口，再看对手怎么做</p>
+    </div>
+    <div class="gallery gallery--wide" data-lightbox data-stagger="0.07">
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-03.jpg" alt="项目背景说明页" loading="lazy" />
+        <figcaption><b>项目背景</b>咖啡消费需求年增约 20%，但缺少直接对接一带一路沿线产地与中国市场的平台</figcaption>
+      </figure>
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-04.jpg" alt="竞品分析 SWOT 矩阵" loading="lazy" />
+        <figcaption><b>竞品分析</b>以「咖啡生活馆 APP」为对象做 SWOT：自身特质 × 环境因素，拆出优势、劣势、机会、威胁</figcaption>
+      </figure>
+    </div>
+
+    <!-- 5.2 用户研究 -->
+    <div class="subhead reveal">
+      <span class="subhead__no">5.2</span>
+      <h3>用户研究</h3>
+      <p>问卷调研 → 数据分析 → 结论 → 用户画像</p>
+    </div>
+    <div class="gallery gallery--wide" data-lightbox data-stagger="0.07">
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-05.jpg" alt="用户调研方案与问卷数据分析" loading="lazy" />
+        <figcaption><b>调研与数据</b>明确调研背景、目的、内容、对象与方法，并对回收问卷做年龄、消费水平、偏好等维度的统计</figcaption>
+      </figure>
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-07.jpg" alt="用户研究七条结论" loading="lazy" />
+        <figcaption><b>研究结论</b>七条可执行结论——例如“多数被调查者对沿线国家咖啡文化所知寥寥”，直接成为咖趣模块的立项依据</figcaption>
+      </figure>
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-08.jpg" alt="两位用户画像" loading="lazy" />
+        <figcaption><b>用户画像</b>建立两个典型 persona，把行为动机、使用场景与痛点具体化</figcaption>
+      </figure>
+    </div>
+
+    <!-- 5.3 信息架构 -->
+    <div class="subhead reveal">
+      <span class="subhead__no">5.3</span>
+      <h3>信息架构</h3>
+      <p>需求分级 → 架构树 → 流程图 → 低保真原型</p>
+    </div>
+    <div class="gallery gallery--wide" data-lightbox data-stagger="0.07">
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-09.jpg" alt="需求列表分级表" loading="lazy" />
+        <figcaption><b>需求列表</b>把需求拆成「需求等级 / 需求点 / 功能 / 分区」四列，区分核心需求与一般需求，避免一次做太多</figcaption>
+      </figure>
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-10.jpg" alt="信息架构树状图" loading="lazy" />
+        <figcaption><b>架构树</b>四个一级模块向下展开到具体页面，控制层级深度</figcaption>
+      </figure>
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-11.jpg" alt="购买咖啡用户流程图" loading="lazy" />
+        <figcaption><b>用户流程图</b>以“购买咖啡”为案例，走通从进入咖屋、选择分区、查看详情到加入购物车与提交订单的完整路径</figcaption>
+      </figure>
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-12.jpg" alt="低保真原型图全貌" loading="lazy" />
+        <figcaption><b>原型图</b>低保真线框覆盖全部主要页面，并用连线标出跳转关系</figcaption>
+      </figure>
+    </div>
+
+    <!-- 5.4 设计规范 -->
+    <div class="subhead reveal">
+      <span class="subhead__no">5.4</span>
+      <h3>设计规范</h3>
+      <p>图标、导航模式、色彩与字号体系</p>
+    </div>
+    <div class="gallery gallery--wide" data-lightbox data-stagger="0.07">
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-13.jpg" alt="图标说明与品牌色" loading="lazy" />
+        <figcaption><b>图标说明</b>咖啡杯 Logo、咖啡豆吉祥物与四个模块图标；主色 #56432E、点睛色 #EDDE29</figcaption>
+      </figure>
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-14.jpg" alt="抽屉式、顶部标签式、底部标签式导航" loading="lazy" />
+        <figcaption><b>导航模式（一）</b>抽屉式用于分类跳转，顶部标签式切换内容流，底部标签式承载四个一级模块</figcaption>
+      </figure>
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-15.jpg" alt="列表菜单式导航" loading="lazy" />
+        <figcaption><b>导航模式（二）</b>列表菜单式用于咖屋的器具与礼品分区，大图配英文品类，强化质感</figcaption>
+      </figure>
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-16.jpg" alt="色彩与字号规范表" loading="lazy" />
+        <figcaption><b>色彩与字号</b>主色 / 辅助色 / 点睛色 / 基色四档色值与用途；字号从 22px 主标题递减到 8px 次要辅助文字，共七级</figcaption>
+      </figure>
+    </div>
+
+    <!-- 5.5 界面展示 -->
+    <div class="subhead reveal">
+      <span class="subhead__no">5.5</span>
+      <h3>界面展示</h3>
+      <p>高保真界面与交互演示</p>
+    </div>
+    <div class="gallery gallery--wide" data-lightbox data-stagger="0.07">
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-17.jpg" alt="APP 登录页高保真界面" loading="lazy" />
+        <figcaption><b>登录页</b>大面积留白 + 品牌 Logo 居中，点睛色只用在登录按钮上</figcaption>
+      </figure>
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-18.jpg" alt="咖趣与咖话界面" loading="lazy" />
+        <figcaption><b>咖趣 / 咖话</b>咖趣里查看喜欢的文章与视频；咖话里找到志同道合的朋友与兴趣话题</figcaption>
+      </figure>
+      <figure class="shot shot--slide reveal">
+        <img src="../assets/img/kcapp-19.jpg" alt="全部界面拼贴与交互演示" loading="lazy" />
+        <figcaption><b>界面全貌</b>主要页面拼贴展示，配合交互演示视频说明操作流程</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ======================================================== 上下篇 -->
+  <nav class="wrap pager" aria-label="项目导航">
+    <a href="black-box.html">
+      <span>上一个项目</span>
+      <b>公益广告《甩不掉的黑盒子》</b>
+    </a>
+    <a href="wukong-courses.html">
+      <span>下一个项目</span>
+      <b>wukong-courses 课程系统</b>
+    </a>
+  </nav>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div>
+      <div class="footer__name">杨可欣 · Kexin Yang</div>
+      <div class="footer__meta">教育技术 / 数字媒体设计 / AI 应用</div>
+    </div>
+    <nav class="footer__links" aria-label="页脚导航">
+      <a href="../index.html#projects">全部项目</a>
+      <a href="../index.html#contact">联系我</a>
+      <a href="https://github.com/GingerYang19" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

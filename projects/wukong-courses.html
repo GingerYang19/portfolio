@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>wukong-courses 课程系统 | 杨可欣作品集</title>
+<meta name="description" content="面向企业 AI 培训业务的课程官网系统：五大栏目、九个公开课详情页，统一设计规范层的多页静态站点。" />
+<meta name="theme-color" content="#faf9f7" />
+<link rel="stylesheet" href="../assets/css/style.css" />
+<link rel="stylesheet" href="../assets/css/detail.css" />
+</head>
+<body>
+
+<div class="progress" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="../index.html">杨可欣 <small>Portfolio</small></a>
+    <nav class="nav__links" aria-label="主导航">
+      <a class="nav__link" href="../index.html#about">关于我<small>About me</small></a>
+      <a class="nav__link is-active" href="../index.html#projects">项目展示<small>Projects</small></a>
+      <a class="nav__link" href="../index.html#experience">实习经历<small>Experience</small></a>
+      <a class="nav__link" href="../index.html#contact">联系我<small>Contact me</small></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="detail-hero">
+    <div class="wrap">
+      <a class="crumb" href="../index.html#projects">
+        <svg viewBox="0 0 16 16"><path d="M10 3L5 8l5 5"/></svg>
+        返回项目列表
+      </a>
+
+      <p class="detail-hero__cat">网页 / APP · 02</p>
+      <h1 class="detail-hero__title mask"><span>wukong-courses 课程系统</span></h1>
+      <p class="detail-hero__sub reveal" style="--d:.12s">
+        AI 咨询研究院的课程官网系统。主题是“从理论到实战，让 AI 从工具变成生产力”——
+        我要解决的问题是：如何让一屏屏冗长的招生信息，变成可以扫读、可以比较、可以立刻报名的页面。
+      </p>
+
+      <dl class="facts reveal" style="--d:.2s">
+        <div class="fact"><dt>年份</dt><dd>2026</dd></div>
+        <div class="fact"><dt>角色</dt><dd>信息架构 / 前端实现</dd></div>
+        <div class="fact"><dt>规模</dt><dd>17 个页面文件</dd></div>
+        <div class="fact"><dt>技术</dt><dd>HTML · CSS · 原生 JS</dd></div>
+        <div class="fact"><dt>仓库</dt><dd><a href="https://github.com/GingerYang19/wukong-courses" target="_blank" rel="noopener">GitHub ↗</a></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="stage zoom-in">
+      <img src="../assets/img/shot-wukong-home.jpg" alt="课程系统首页首屏与内容区" />
+    </div>
+    <p class="stage__note reveal">首页：轮播首屏 + 痛点问答 + 最佳实践案例</p>
+  </section>
+
+  <!-- 项目概述 -->
+  <section class="chapter wrap">
+    <div class="chapter__head reveal">
+      <span class="chapter__no">01</span>
+      <h2 class="chapter__title">项目概述<em>Overview</em></h2>
+    </div>
+
+    <div class="duo">
+      <div class="prose reveal">
+        <p>
+          企业 AI 培训的招生页面有个共同的毛病：信息太多、层级太平。
+          课程名、对象、天数、城市、日期、价格、讲师背景、案例成果全堆在一起，
+          访客看三秒就走了。
+        </p>
+        <p>
+          我的做法是<strong>先分人，再分场景</strong>。整站拆成五个栏目：
+          公开课面向个人报名，企业定制课程面向决策者，线上课程面向自学，
+          首页负责建立信任，合作咨询负责转化。每类访客都能在第一屏找到属于自己的入口。
+        </p>
+      </div>
+      <div class="prose reveal" style="--d:.1s">
+        <h4 style="margin-top:0">关键设计决策</h4>
+        <ul>
+          <li><strong>统一设计规范层</strong>：把颜色、字号、卡片、按钮、间距抽到 <code>common-styles.css</code>，17 个页面共享一套视觉语言</li>
+          <li><strong>课程卡片模板化</strong>：海报 + 天数角标 + 标签组 + 城市 + 日期 + 查看详情，信息位置固定，便于横向比较</li>
+          <li><strong>筛选前置</strong>：公开课列表页顶部提供关键字、类别、对象、城市、时间五个筛选条件</li>
+          <li><strong>对比式说服</strong>：详情页用“普通 AI 课 vs 本课程”的双栏对照，替代大段文案</li>
+          <li><strong>案例即证据</strong>：首页直接陈列可量化的实践成果，而不是空泛的宣传语</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页面一览 -->
+  <section class="chapter wrap">
+    <div class="chapter__head reveal">
+      <span class="chapter__no">02</span>
+      <h2 class="chapter__title">页面一览<em>Screens</em></h2>
+    </div>
+
+    <div class="gallery gallery--wide" data-lightbox data-stagger="0.08">
+      <figure class="shot reveal">
+        <img src="../assets/img/shot-wukong-public.jpg" alt="公开课列表页" loading="lazy" />
+        <figcaption><b>公开课列表</b>五条件筛选 + 竖版课程卡片网格，天数以角标呈现，城市与日期左右对齐便于比较</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="../assets/img/shot-wukong-enterprise.jpg" alt="企业定制课程页" loading="lazy" />
+        <figcaption><b>企业定制课程</b>三张价值主张卡（实战 / 权威 / 洞察）+ 三步定制流程图，面向决策者的说服路径</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="../assets/img/shot-wukong-detail.jpg" alt="课程详情页" loading="lazy" />
+        <figcaption><b>课程详情</b>左侧标题与标签、右侧课程安排卡与海报，下方用对照表说明差异</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="../assets/img/shot-wukong-online.jpg" alt="线上课程页" loading="lazy" />
+        <figcaption><b>线上课程</b>面向自学场景的课程陈列，与线下公开课在视觉上保持一致但节奏更轻</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 实现要点 -->
+  <section class="chapter wrap">
+    <div class="chapter__head reveal">
+      <span class="chapter__no">03</span>
+      <h2 class="chapter__title">实现要点<em>Process</em></h2>
+    </div>
+
+    <div class="steps" data-stagger="0.08">
+      <div class="step reveal">
+        <div class="step__no">01</div>
+        <div>
+          <h4>栏目切换用局部加载</h4>
+          <p>
+            首页通过 <code>switchMainTab()</code> 按需 fetch 对应的 <code>tab-*.html</code> 片段并注入容器，
+            切换栏目不整页刷新；同时支持 URL hash 直达（如 <code>#enterprise</code>），
+            外部链接可以精确指向某个栏目。
+          </p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step__no">02</div>
+        <div>
+          <h4>样式分层，避免复制粘贴</h4>
+          <p>
+            <code>common-styles.css</code> 承担全站通用规范，各页面只写自己的差异样式。
+            后期调整主色或卡片圆角，只需改一处。
+          </p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step__no">03</div>
+        <div>
+          <h4>课程数据结构化</h4>
+          <p>
+            把每门课抽象成同一组字段（海报、名称、天数、标签、城市、日期、对象），
+            列表页和详情页共用这套结构，新增课程只是增加一条数据与一个详情页。
+          </p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step__no">04</div>
+        <div>
+          <h4>移动端适配</h4>
+          <p>
+            卡片网格用响应式列数，筛选条件在窄屏折行，
+            详情页的双栏对照在手机上自动堆叠为上下结构，保证可读性。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="wrap pager" aria-label="项目导航">
+    <a href="kacool.html">
+      <span>上一个项目</span>
+      <b>咖cool 咖啡文化电商网站</b>
+    </a>
+    <a href="agent-foreman.html">
+      <span>下一个项目</span>
+      <b>个人 Agent 活动监工台</b>
+    </a>
+  </nav>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div>
+      <div class="footer__name">杨可欣 · Kexin Yang</div>
+      <div class="footer__meta">教育技术 / 数字媒体设计 / AI 应用</div>
+    </div>
+    <nav class="footer__links" aria-label="页脚导航">
+      <a href="../index.html#projects">全部项目</a>
+      <a href="../index.html#contact">联系我</a>
+      <a href="https://github.com/GingerYang19" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>教师在线教学能力评价系统 | 杨可欣作品集</title>
+<meta name="description" content="基于 Streamlit 与 BERT 的教师教学能力画像平台：MOOC 评价爬取、五维文本分类、可视化画像与 AI 教学改进建议。" />
+<meta name="theme-color" content="#faf9f7" />
+<link rel="stylesheet" href="../assets/css/style.css" />
+<link rel="stylesheet" href="../assets/css/detail.css" />
+</head>
+<body>
+
+<div class="progress" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="../index.html">杨可欣 <small>Portfolio</small></a>
+    <nav class="nav__links" aria-label="主导航">
+      <a class="nav__link" href="../index.html#about">关于我<small>About me</small></a>
+      <a class="nav__link is-active" href="../index.html#projects">项目展示<small>Projects</small></a>
+      <a class="nav__link" href="../index.html#experience">实习经历<small>Experience</small></a>
+      <a class="nav__link" href="../index.html#contact">联系我<small>Contact me</small></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="detail-hero">
+    <div class="wrap">
+      <a class="crumb" href="../index.html#projects">
+        <svg viewBox="0 0 16 16"><path d="M10 3L5 8l5 5"/></svg>
+        返回项目列表
+      </a>
+
+      <p class="detail-hero__cat">网页 / APP · 04</p>
+      <h1 class="detail-hero__title mask"><span>教师在线教学能力评价系统</span></h1>
+      <p class="detail-hero__sub reveal" style="--d:.12s">
+        在线课程下面动辄上千条学生评价，但对教师来说几乎是不可读的。
+        这个系统用 BERT 把评论自动归入教学能力维度，再把结果变成可以直接行动的改进建议。
+      </p>
+
+      <dl class="facts reveal" style="--d:.2s">
+        <div class="fact"><dt>年份</dt><dd>2026</dd></div>
+        <div class="fact"><dt>角色</dt><dd>数据 / 模型 / 前端</dd></div>
+        <div class="fact"><dt>技术</dt><dd>Streamlit · PyTorch · BERT</dd></div>
+        <div class="fact"><dt>数据源</dt><dd>中国大学 MOOC 评价</dd></div>
+        <div class="fact"><dt>开源</dt><dd><a href="https://github.com/GingerYang19/Teacher-Portrait-System" target="_blank" rel="noopener">MIT · GitHub ↗</a></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="stage zoom-in">
+      <img src="../assets/img/tp-4.jpg" alt="AI 智能教学画像分析与建议页面" />
+    </div>
+    <p class="stage__note reveal">AI 智能分析：画像摘要 + 维度占比速览 + 教学改进建议</p>
+  </section>
+
+  <!-- 问题 -->
+  <section class="chapter wrap">
+    <div class="chapter__head reveal">
+      <span class="chapter__no">01</span>
+      <h2 class="chapter__title">问题与方案<em>Overview</em></h2>
+    </div>
+
+    <div class="duo">
+      <div class="prose reveal">
+        <p>
+          MOOC 平台的课程评价区里，“老师讲得好”“很有收获”这类话占了绝大多数。
+          它们是善意的，但对改进教学没有任何指向性。
+          真正有价值的信息——比如“视频里的例子太旧”“作业反馈太慢”——
+          被稀释在噪声里，教师很难捞出来。
+        </p>
+        <p>
+          我的方案是把评价<strong>结构化</strong>：先用 BERT 中文文本分类模型把每条评论
+          归入一个教学能力维度，顺便把无意义评价单独标出；
+          再按维度做词频与关键词分析，让教师看到自己在哪一维度上被反复提到什么。
+          最后由规则引擎把这些分布转成一段可读的画像摘要与三类改进建议。
+        </p>
+      </div>
+      <div class="prose reveal" style="--d:.1s">
+        <h4 style="margin-top:0">五个评价维度</h4>
+        <ul>
+          <li><strong>教学设计能力</strong> — 教学目标、教学内容、教学活动（内容体验）</li>
+          <li><strong>学习辅助能力</strong> — 教学媒体与环境、测验评价与反馈、教学资源（学习辅助体验）</li>
+          <li><strong>教学组织能力</strong> — 教学风格、教学技能、教学状态（教师评价）</li>
+          <li><strong>教学成效创生能力</strong> — 认知层面、技能层面、情感层面（价值体验）</li>
+          <li><strong>无意义评价</strong> — 仅表达整体好感、无具体指向的评论，单独计量以衡量有效评价比例</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 界面 -->
+  <section class="chapter wrap">
+    <div class="chapter__head reveal">
+      <span class="chapter__no">02</span>
+      <h2 class="chapter__title">功能界面<em>Screens</em></h2>
+    </div>
+
+    <div class="gallery gallery--wide" data-lightbox data-stagger="0.08">
+      <figure class="shot reveal">
+        <img src="../assets/img/tp-1.jpg" alt="词云图页面" loading="lazy" />
+        <figcaption><b>词云图</b>展示学生评价中的高频关键词，直观呈现该课程被讨论最多的教学关注点</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="../assets/img/tp-2.jpg" alt="类别分布页面" loading="lazy" />
+        <figcaption><b>类别分布</b>饼状图与柱状图并置，展示五大能力维度的评价数量与占比</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="../assets/img/tp-3.jpg" alt="词频分析页面" loading="lazy" />
+        <figcaption><b>词频分析</b>按维度细分的 TextRank 关键词提取，词云图配合水平条形图呈现权重</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="../assets/img/tp-5.jpg" alt="课程添加页面" loading="lazy" />
+        <figcaption><b>课程添加</b>输入课程名与 MOOC 网址即可爬取评价并调用模型分类，管理员可增删改查</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 技术 -->
+  <section class="chapter wrap">
+    <div class="chapter__head reveal">
+      <span class="chapter__no">03</span>
+      <h2 class="chapter__title">实现流程<em>Process</em></h2>
+    </div>
+
+    <div class="steps" data-stagger="0.08">
+      <div class="step reveal">
+        <div class="step__no">01</div>
+        <div>
+          <h4>数据采集</h4>
+          <p>
+            用 Requests 编写 MOOC 评论爬虫，按课程网址分页抓取学生评价，
+            落地为原始数据文件，供后续标注与训练使用。
+          </p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step__no">02</div>
+        <div>
+          <h4>标注与编码框架</h4>
+          <p>
+            依据教学能力的二级维度制定编码框架，人工标注一批评论作为训练集，
+            确保四个能力维度与“无意义评价”之间的边界一致。
+          </p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step__no">03</div>
+        <div>
+          <h4>模型训练</h4>
+          <p>
+            基于 Bert-Chinese-Text-Classification-Pytorch 训练分类模型
+            （同时试过 ERNIE 及若干变体），对新课程的评论批量推理归类，
+            结果写入按维度分表的数据文件。
+          </p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step__no">04</div>
+        <div>
+          <h4>分析与可视化</h4>
+          <p>
+            用 jieba 分词配合停用词表清洗文本，TextRank 提取维度内关键词，
+            再用 PyEcharts 与 streamlit-echarts 输出词云、饼图、柱状图与条形图。
+          </p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step__no">05</div>
+        <div>
+          <h4>规则引擎生成建议</h4>
+          <p>
+            比较各维度占比，自动识别优势维度与薄弱维度、计算有效评价比例，
+            并从优势巩固、短板补齐、评价优化三个方向输出针对性的教学改进建议。
+          </p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step__no">06</div>
+        <div>
+          <h4>Streamlit 封装</h4>
+          <p>
+            以侧边栏导航组织“评价结果 / 课程添加 / 管理员权限”三个功能区，
+            教师选择课程即可查看完整画像，无需接触任何代码。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="wrap pager" aria-label="项目导航">
+    <a href="agent-foreman.html">
+      <span>上一个项目</span>
+      <b>个人 Agent 活动监工台</b>
+    </a>
+    <a href="cee-mouse.html">
+      <span>下一个项目</span>
+      <b>CEE Mouse 动画设计《零分贝》</b>
+    </a>
+  </nav>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div>
+      <div class="footer__name">杨可欣 · Kexin Yang</div>
+      <div class="footer__meta">教育技术 / 数字媒体设计 / AI 应用</div>
+    </div>
+    <nav class="footer__links" aria-label="页脚导航">
+      <a href="../index.html#projects">全部项目</a>
+      <a href="../index.html#contact">联系我</a>
+      <a href="https://github.com/GingerYang19" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

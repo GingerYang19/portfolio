@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>个人 Agent 活动监工台 | 杨可欣作品集</title>
+<meta name="description" content="统一监控多个桌面 AI Agent 工作状态的本地仪表盘：三态判定、Skill 统计、每日总结，Python 标准库实现。" />
+<meta name="theme-color" content="#faf9f7" />
+<link rel="stylesheet" href="../assets/css/style.css" />
+<link rel="stylesheet" href="../assets/css/detail.css" />
+</head>
+<body>
+
+<div class="progress" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="../index.html">杨可欣 <small>Portfolio</small></a>
+    <nav class="nav__links" aria-label="主导航">
+      <a class="nav__link" href="../index.html#about">关于我<small>About me</small></a>
+      <a class="nav__link is-active" href="../index.html#projects">项目展示<small>Projects</small></a>
+      <a class="nav__link" href="../index.html#experience">实习经历<small>Experience</small></a>
+      <a class="nav__link" href="../index.html#contact">联系我<small>Contact me</small></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="detail-hero">
+    <div class="wrap">
+      <a class="crumb" href="../index.html#projects">
+        <svg viewBox="0 0 16 16"><path d="M10 3L5 8l5 5"/></svg>
+        返回项目列表
+      </a>
+
+      <p class="detail-hero__cat">网页 / APP · 03</p>
+      <h1 class="detail-hero__title mask"><span>个人 Agent 活动监工台</span></h1>
+      <p class="detail-hero__sub reveal" style="--d:.12s">
+        当同时使用五个桌面 AI Agent 时，最大的浪费不是算力，而是“不知道谁在等我回话”。
+        这是一个跑在本地的仪表盘，把散落在各处的会话数据收拢成一块可以一眼看懂的看板。
+      </p>
+
+      <dl class="facts reveal" style="--d:.2s">
+        <div class="fact"><dt>年份</dt><dd>2026</dd></div>
+        <div class="fact"><dt>角色</dt><dd>独立开发</dd></div>
+        <div class="fact"><dt>技术</dt><dd>Python 标准库 · AppKit</dd></div>
+        <div class="fact"><dt>形态</dt><dd>桌面 App + 网页版</dd></div>
+        <div class="fact"><dt>开源</dt><dd><a href="https://github.com/GingerYang19/personal-agent-foreman" target="_blank" rel="noopener">MIT · GitHub ↗</a></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="stage zoom-in">
+      <img src="../assets/img/af-2.jpg" alt="每日监工台页面：三态统计卡、Agent 班组任务卡片与今日时间线" />
+    </div>
+    <p class="stage__note reveal">每日监工台：三态统计卡 + Agent 班组任务卡片 + 今日时间线</p>
+  </section>
+
+  <!-- 起因 -->
+  <section class="chapter wrap">
+    <div class="chapter__head reveal">
+      <span class="chapter__no">01</span>
+      <h2 class="chapter__title">起因与思路<em>Overview</em></h2>
+    </div>
+
+    <div class="duo">
+      <div class="prose reveal">
+        <p>
+          我平时会同时开着 Codex、QoderWork、Mulerun、Qoder、QwenWork 五个桌面 Agent 干活。
+          问题很快出现：它们各自把会话记录写在不同格式的文件里，
+          有的是 SQLite，有的是 JSONL，有的干脆是一堆目录。
+          我必须一个个点开窗口，才能知道哪个还在跑、哪个已经停下来等我确认。
+        </p>
+        <p>
+          于是我把它抽象成一个<strong>工地</strong>的隐喻：每个 Agent 是一个工人，
+          我是监工。工人只有三种状态——<strong>开工</strong>（正在执行）、
+          <strong>等回话</strong>（需要我介入）、<strong>摸鱼</strong>（空闲）。
+          界面要做的事只有一件：让“等回话”的那几个立刻跳出来。
+        </p>
+      </div>
+      <div class="prose reveal" style="--d:.1s">
+        <h4 style="margin-top:0">核心功能</h4>
+        <ul>
+          <li><strong>多 Agent 状态监控</strong>：轮询五个数据源，三态判定，2 秒刷新</li>
+          <li><strong>会话分类与时间线</strong>：按 Agent 分组的任务卡片 + 今日活动时间线</li>
+          <li><strong>发话功能</strong>：在浏览器里直接给 Agent 发消息（Codex CLI 直接注入，其余通过剪贴板 + 深链 + 按键）</li>
+          <li><strong>Skill 统计</strong>：扫描全部历史会话中的技能调用，排行柱状图 + 每日趋势 + 搜索过滤</li>
+          <li><strong>工作总览</strong>：累计会话数、工作时长、活跃天数与各 Agent 对比</li>
+          <li><strong>每日总结</strong>：按天记录与 Agent 协作的心得，可编辑历史条目</li>
+          <li><strong>深链跳转与别名</strong>：一键跳到对应会话窗口，可给每个 Agent 起昵称</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 界面 -->
+  <section class="chapter wrap">
+    <div class="chapter__head reveal">
+      <span class="chapter__no">02</span>
+      <h2 class="chapter__title">界面一览<em>Screens</em></h2>
+    </div>
+
+    <div class="gallery gallery--wide" data-lightbox data-stagger="0.08">
+      <figure class="shot reveal">
+        <img src="../assets/img/af-1.jpg" alt="工作总览页面" loading="lazy" />
+        <figcaption><b>工作总览</b>累计会话与时长指标卡、各 Agent 会话数柱状图、每日活动趋势面积图与指标明细表</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="../assets/img/af-2.jpg" alt="每日监工台页面" loading="lazy" />
+        <figcaption><b>每日监工台</b>三态统计卡支持点击筛选，任务卡片可直接发话，右侧为今日时间线</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="../assets/img/af-3.jpg" alt="Skill 统计页面" loading="lazy" />
+        <figcaption><b>Skill 统计</b>累计技能调用排行、每日使用趋势与搜索联动的明细表</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="../assets/img/af-4.jpg" alt="每日总结页面" loading="lazy" />
+        <figcaption><b>每日总结</b>按天持久化记录协作心得，支持保存、编辑与历史浏览</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 技术实现 -->
+  <section class="chapter wrap">
+    <div class="chapter__head reveal">
+      <span class="chapter__no">03</span>
+      <h2 class="chapter__title">技术实现<em>Process</em></h2>
+    </div>
+
+    <div class="steps" data-stagger="0.08">
+      <div class="step reveal">
+        <div class="step__no">01</div>
+        <div>
+          <h4>零依赖的服务端</h4>
+          <p>
+            整个后端只用 Python 标准库实现，不引入任何第三方包——
+            这样任何一台装了 Python 3.9+ 的 Mac 都能 <code>python3 server.py</code> 直接跑起来，
+            不需要处理虚拟环境和依赖冲突。
+          </p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step__no">02</div>
+        <div>
+          <h4>多格式数据源适配</h4>
+          <p>
+            为 SQLite、JSONL、目录扫描三类数据源分别写解析器，对上层暴露统一的会话模型。
+            读取时做增量缓存，避免每次轮询都重新解析全部历史文件。
+          </p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step__no">03</div>
+        <div>
+          <h4>三态判定规则</h4>
+          <p>
+            结合最后一条消息的角色与时间差判断状态：
+            Agent 刚发言且在等待输入判为“等回话”，持续产出判为“开工”，
+            长时间无动作判为“摸鱼”。前端每 2 秒刷新一次。
+          </p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step__no">04</div>
+        <div>
+          <h4>发话通道</h4>
+          <p>
+            Codex CLI 支持真实注入；其余 Agent 没有开放接口，
+            于是走“剪贴板写入 + 深链唤起窗口 + 模拟按键粘贴回车”的组合方案，
+            并封装成需要辅助功能授权的 SendHelper.app。
+          </p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step__no">05</div>
+        <div>
+          <h4>双形态与保活</h4>
+          <p>
+            同一套服务与数据支撑两种形态：AppKit + WKWebView 的原生窗口版，
+            以及浏览器访问的网页版。注册为 launchd 服务后可开机自启、崩溃自动重启，
+            运行数据独立存放，升级 App 不丢历史。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="wrap pager" aria-label="项目导航">
+    <a href="wukong-courses.html">
+      <span>上一个项目</span>
+      <b>wukong-courses 课程系统</b>
+    </a>
+    <a href="teacher-portrait.html">
+      <span>下一个项目</span>
+      <b>教师在线教学能力评价系统</b>
+    </a>
+  </nav>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div>
+      <div class="footer__name">杨可欣 · Kexin Yang</div>
+      <div class="footer__meta">教育技术 / 数字媒体设计 / AI 应用</div>
+    </div>
+    <nav class="footer__links" aria-label="页脚导航">
+      <a href="../index.html#projects">全部项目</a>
+      <a href="../index.html#contact">联系我</a>
+      <a href="https://github.com/GingerYang19" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
