@@ -405,14 +405,18 @@ ul {
 }
 
 /* 文字自下遮罩掀起 */
+/* padding-bottom 为 g / y / p 等下沉笔画留出空间（overflow:hidden 会裁掉超出行框的部分），
+   再用等量负 margin 抵消，保证排版位置不变 */
 .mask {
   display: block;
   overflow: hidden;
+  padding-bottom: 0.16em;
+  margin-bottom: -0.16em;
 }
 
 .mask > span {
   display: block;
-  transform: translateY(105%);
+  transform: translateY(calc(105% + 0.16em));
   transition: transform 1.05s var(--ease-out);
   transition-delay: var(--d, 0s);
 }
